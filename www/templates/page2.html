@@ -1,0 +1,21 @@
+<ion-view title="홈" id="page2" class=" ">
+    <ion-content padding="true" class="has-header">
+        <ion-list id="page2-list1" class=" ">
+			<ion-item ng-repeat="store in stores" class="store_box">
+				<div class="store_img">
+					<img src={{store.img}} style="width:120px; height:120px;">
+				</div>
+				<div class="store_content">
+					<rating ng-model="store.rate" max="5" readonly=true></rating>
+					<h2>{{store.name}}</h2>
+					리뷰{{store.cnt_review}}  사진{{store.cnt_picture}}  사장님댓글{{store.cnt_ceo}}
+					<br />
+					<p ng-class="store.is_call?'on':'off'">전화주문</p>
+					<p ng-class="store.is_now_oder?'on':'off'">바로결제</p>
+				   	<p ng-class="store.is_meet?'on':'off'">만나서결제</p>
+				</div>
+			</ion-item>
+	
+		</ion-list>
+    </ion-content>
+</ion-view>
