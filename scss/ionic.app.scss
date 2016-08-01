@@ -18,37 +18,79 @@ $dark:                            #444 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
+$stable: #282522 !default;
+$button-stable-text: #eee !default;
+$button-stable-border : white !default;
+$button-stable-active-border : white !default;
+$button-light-border : white !default;
+
+/* Active state for tab */
+
+	
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.tab-item {
+	&.tab-item-active,
+	&.active,
+	&.activated {
+		color:#FF8000;
+	}
+}
+
+.rating {
+	.ion-ios-star {
+		color:#FFBF00;
+	}
+	.ion-ios-star-outline {
+		color:gray;
+	}
+}
+
 #page2 {
+	h2 {
+		font-weight:bold;
+	}
 	li {
 		display:inline;
 	}
 	.store_box {
 		width:100%;
-		height:150px;
+		height:132px;
 	}
 	.store_img {
 		height:100%;
-		width:150px;
+		width:100px;
 		overflow:hidden;
 		float:left;
 	}
 	.store_content {
+		position:absolute;
 		height:100%;
 		width:100%;
-		padding-left:150px;
+		padding-left:100px;
+	}
+	.cnt_label {
+		color:#82898d;
 	}
 	p {
 		display:inline;
 		color:white;
+		padding:3px 3px;
 	}
 	.on {
-		background:blue;
+		background:#2ac1bc;
 	}
 	.off {
-		background:gray;
+		background:#c1c3c4;
+	}
+	.forward_icon {
+		top: 40px;
+		left: 92%;
+		color: #bfbfbf;
+		position:absolute;
+		width:8px;
+		height:18px;
 	}
 }
 
